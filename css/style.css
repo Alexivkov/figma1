@@ -181,11 +181,6 @@ body{
   color:#102746;
   font-weight: normal;
 }
-/* header styles start */
-.wrapper{
-  max-width: 1060px;
-  margin: 0 auto;
-}
 
 header {
   position: fixed;
@@ -193,6 +188,43 @@ header {
   left:0;
   width: 100%;
 }
+
+.section_title{
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section_title::after{
+  display: block;
+  content: "";
+  width: 253px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #006DFE;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper{
+  max-width: 1060px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.wrapper_full{
+  max-width: 1262px;
+  margin: 0 auto;
+}
+
+/* header styles start */
 
 .header__wrapper{
   display: flex;
@@ -234,6 +266,7 @@ text-decoration: none;
   background: url(../img/Hero.jpg) no-repeat center;
   background-size: cover;
   padding-top: 263px;
+  padding-bottom: 223px;
 }
 
 .intro__title{
@@ -305,6 +338,8 @@ text-decoration: none;
   background-color: #fff;
   margin: 0 auto;
   position: relative;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  padding-bottom: 131px;
 }
 
 .benefits__title{
@@ -329,9 +364,145 @@ text-decoration: none;
 
 .benefits__card {
   grid-column: span 1;
-  width: 317px;;
+  width: 317px;
+  margin-bottom: 111px;
+}
+
+.benefits__card__pic{
+  margin-bottom: 37px;
+  max-width: 66px;
 }
 
 .benefits__card_thumb{
   display: block;
 }
+
+.benefits__card__header{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 37px;
+  }
+
+  .benefits__card__desc{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 39px;
+  }
+
+
+  .benefits__card_link{
+    display: inline-block;
+    padding-right: 59px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none;
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
+    transition: .2s all;
+  }
+
+  .benefits__card_link:hover, .benefits__card_link:focus{
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+  }
+
+  /* benefits styles end   */
+
+  /* places styles start  */
+  .places{
+    margin-bottom: 131px;
+  }
+
+  .places__caption{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 46px;
+  }
+
+  .places__view__all{
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none;
+    background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+    padding-right: 59px;
+  }
+
+  .places__view__all:focus, .places__view__all:hover{
+    opacity: .65;
+  }
+
+  .places__title{
+    margin-right: 15px;
+  }
+
+  .places__cards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+  }
+
+  .places__card{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .places__card::after{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+  }
+
+  .places__card:hover .places__card__pic {
+    transform: scale(1.05);
+  }
+
+  .places__card__title{
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+  }
+
+  .places__cards__size__2{
+    grid-column: span 3;
+  }
+
+  .places__cards__size__3{
+    grid-column: span 2;
+  }
+
+  .places__card__pic{
+   transition: .75;
+  }
+
+  .places__cards__size__2{
+    height: 354px;
+    object-fit: cover;
+  }
+
+  .places__cards__size__3{
+    height: 283px;
+    object-fit: cover;
+  }
+
+  .places__card__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+  }
